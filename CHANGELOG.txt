@@ -1,0 +1,81 @@
+[CHANGELOG]
+===========
+
+CropShot
+=========
+
+>>> start-date: 30.06.15
+>>> status-date: 08.07.16
+____________________________________________________
+
+
+v.2.2.0 - (8)
+===============
+
+-fixed bug that prevented user from clicking on selectFolder button if the previous selected folder doesn't exist anymore
+-automatically create config file if not existing (doesn't need installer anymore)
+
+>>> end-work: 08.07.16
+
+v.2.1.1 - (7)
+===============
+
+-fixed bugs under Win 10
+
+>>> end-work: 26.06.16
+
+v.2.1.0 - (6)
+===============
+
+-click on Button "Choose" opens last selected Folder
+-added Tooltip --> showing selected savePath
+(because savePath could be too long for label)
+
+>>> end-work: 23.03.16
+
+v.2.0.2 - (5)
+===============
+
+-Bugfixes
+-deactived CropButton while list loads
+-added CancelButton
+-adding of new images via Drag&Drop now also possible after cropping once
+
+>>> end-work: 09.12.15
+
+v.2.0.1 - (4)
+===============
+
+-Bugfixes
+
+>>> end-work: 08.12.15
+
+v.2.0.0 - (3)
+===============
+
+--> improved selection of cropping ares
+--> double click on an image opens a new window
+--> sliders and preview to select cropping area
+
+--> added Drag&Drop functionality
+--> moved file loading from GUI-Thread to extra Thread
+
+>>> end-work: 08.12.15
+
+v.1.1.0 - (2)
+===============
+
+-added preview area
+
+>>> end-work: 14.07.15
+
+v.1.0.0 - (1)
+===============
+
+-basic implementation
+
+>>> end-work: 30.06.15
+
+____________________________________________________
+
+[/CHANGELOG]

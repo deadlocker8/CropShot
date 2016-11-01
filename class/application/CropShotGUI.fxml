@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneMain" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Label layoutX="329.0" layoutY="55.0" text="CropShot">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="chooseButton" layoutX="440.0" layoutY="118.0" mnemonicParsing="false" onAction="#chooseButton" text="Dateien auswählen">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="644.0" layoutY="273.0" text="Breite:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="label" layoutX="226.0" layoutY="119.0" text="16 Dateien ausgewählt">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane" layoutX="39.0" layoutY="224.0" prefHeight="300.0" prefWidth="413.0" />
+      <Separator layoutY="165.0" minHeight="5.0" prefHeight="5.0" prefWidth="800.0" />
+      <Separator layoutX="487.0" layoutY="165.0" minWidth="5.0" orientation="VERTICAL" prefHeight="471.0" prefWidth="5.0" />
+      <Label layoutX="649.0" layoutY="322.0" text="Höhe:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="183.0" text="Einstellungen">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="42.0" layoutY="582.0" prefHeight="18.0" prefWidth="259.0" progress="0.0" />
+      <Label fx:id="progressLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="233.0" layoutY="608.0" prefHeight="25.0" prefWidth="56.0" text="1/30">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="544.0" text="Fortschritt:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="cropButton" layoutX="353.0" layoutY="574.0" mnemonicParsing="false" onAction="#cropButton" text="Zuschneiden">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imageView" fitHeight="60.0" fitWidth="60.0" layoutX="245.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="580.0" layoutY="230.0" text="Startkoordinaten:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="557.0" layoutY="273.0" text="X:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="557.0" layoutY="322.0" text="Y:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane fx:id="previewPane" layoutX="528.0" layoutY="429.0" prefHeight="190.0" prefWidth="250.0">
+         <children>
+            <Label fx:id="previewLabel" alignment="CENTER" prefHeight="190.0" prefWidth="250.0" text="Bild in Liste anklicken für Vorschau" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="labelX" layoutX="584.0" layoutY="273.0" prefHeight="25.0" prefWidth="60.0" text="1440">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelY" layoutX="583.0" layoutY="322.0" prefHeight="25.0" prefWidth="60.0" text="1440">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelWidth" layoutX="705.0" layoutY="273.0" prefHeight="25.0" prefWidth="60.0" text="1440">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelHeight" layoutX="707.0" layoutY="322.0" prefHeight="25.0" prefWidth="60.0" text="1440">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="187.0" text="Speicherort:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSavePath" layoutX="141.0" layoutY="191.0" prefHeight="19.0" prefWidth="224.0" text="C:/Users/Robert/Desktop/test">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="selectButton" layoutX="610.0" layoutY="367.0" mnemonicParsing="false" onAction="#buttonSelect" text="Ändern">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <MenuBar layoutY="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datei">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#about" text="Über" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
