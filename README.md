@@ -7,7 +7,7 @@
 
 Allows you to crop many images at once with same settings. Useful for cropping screenshots from a multiple monitor setup. 
 
-_Note: executable Jar an exe file is in the [build directory](build/)_
+_Note: executable jar an exe files are in the [build directory](build/)_
 
 ### Screenshots
 
