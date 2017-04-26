@@ -5,8 +5,16 @@ CropShot
 =========
 
 >>> start-date: 30.06.15
->>> status-date: 08.07.16
+>>> status-date: 26.04.17
 ____________________________________________________
+
+
+v.2.2.1 - (9)
+===============
+
+-fixed bug that prevented user from clicking on selectFolder
+
+>>> end-work: 26.04.17
 
 
 v.2.2.0 - (8)

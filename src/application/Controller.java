@@ -96,17 +96,17 @@ public class Controller implements Initializable
 	public void chooseButton(ActionEvent e)
 	{
 		FileChooser chooser = new FileChooser();	
-		File prefDirectory = new File(System.getProperty("user.home") + "/Pictures/Screenshots/");		
+		File prefDirectory = new File(System.getProperty("user.home") + "/Pictures/Screenshots/");			
 		if(lastFolder != null)
 		{
 			chooser.setInitialDirectory(lastFolder);
 		}
-		else
-		{
+		else if(prefDirectory.exists())
+		{					
 			chooser.setInitialDirectory(prefDirectory);
 		}
 		chooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg"));
-		chooser.setTitle("Dateien ausw‰hlen");
+		chooser.setTitle("Dateien ausw√§hlen");
 
 		List<File> choosenFiles = chooser.showOpenMultipleDialog(stage);
 		if(choosenFiles != null)
@@ -150,7 +150,7 @@ public class Controller implements Initializable
 				Alert alert = new Alert(AlertType.WARNING);
 				alert.setTitle("Warnung");
 				alert.setHeaderText("");
-				alert.setContentText("Kein Speicherort ausgew‰hlt!");
+				alert.setContentText("Kein Speicherort ausgew√§hlt!");
 				alert.initOwner(stage);
 				Stage dialogStage = (Stage)alert.getDialogPane().getScene().getWindow();
 				dialogStage.getIcons().add(new Image(this.getClass().getResource("/application/crop.png").toString()));
@@ -161,12 +161,12 @@ public class Controller implements Initializable
 
 	public void setLabel()
 	{
-		label.setText(files.size() + " Dateien ausgew‰hlt");
+		label.setText(files.size() + " Dateien ausgew√§hlt");
 	}
 
 	public void setLabelZero()
 	{
-		label.setText("0 Dateien ausgew‰hlt");
+		label.setText("0 Dateien ausgew√§hlt");
 	}
 
 	public void clearList()
@@ -191,7 +191,7 @@ public class Controller implements Initializable
 
 		if(files.size() == 0)
 		{
-			Label placeHolder = new Label("Keine Dateien ausgew‰hlt");
+			Label placeHolder = new Label("Keine Dateien ausgew√§hlt");
 			placeHolder.setStyle("-fx-font-size: 16;");
 			list.setPlaceholder(placeHolder);
 		}
@@ -239,7 +239,7 @@ public class Controller implements Initializable
 		loadSettings();
 
 		pane.setStyle("-fx-background-color: #FFFFFF;");
-		label.setText("0 Dateien ausgew‰hlt");
+		label.setText("0 Dateien ausgew√§hlt");
 		progressLabel.setText("");
 
 		Image icon = new Image("/application/crop.png");
@@ -420,7 +420,7 @@ public class Controller implements Initializable
 						alert.setTitle("Warnung");
 						alert.setHeaderText("");
 						alert.getDialogPane().setPrefSize(350, 150);
-						alert.setContentText("Bildausschnitt liegt auﬂerhalb des Bildes! \n\nX + Breite > Bildbreite \n" + Cropper.x + " + " + Cropper.width + " > " + result[1]);
+						alert.setContentText("Bildausschnitt liegt au√üerhalb des Bildes! \n\nX + Breite > Bildbreite \n" + Cropper.x + " + " + Cropper.width + " > " + result[1]);
 						alert.initOwner(stage);
 						alert.showAndWait();
 					}
@@ -430,7 +430,7 @@ public class Controller implements Initializable
 						alert.setTitle("Warnung");
 						alert.setHeaderText("");
 						alert.getDialogPane().setPrefSize(350, 150);
-						alert.setContentText("Bildausschnitt liegt auﬂerhalb des Bildes! \n\nY + Hˆhe > Bildhˆhe \n" + Cropper.y + " + " + Cropper.height + " > " + result[1]);
+						alert.setContentText("Bildausschnitt liegt au√üerhalb des Bildes! \n\nY + H√∂he > Bildh√∂he \n" + Cropper.y + " + " + Cropper.height + " > " + result[1]);
 						alert.initOwner(stage);
 						alert.showAndWait();
 					}
@@ -471,7 +471,7 @@ public class Controller implements Initializable
 	public void clearPreview()
 	{
 		previewPane.getChildren().remove(previewLabel);
-		previewLabel = new Label("Bild in Liste anklicken f¸r Vorschau");
+		previewLabel = new Label("Bild in Liste anklicken f√ºr Vorschau");
 		previewLabel.setPrefWidth(250);
 		previewLabel.setPrefHeight(190);
 		previewLabel.setAlignment(Pos.CENTER);
@@ -496,7 +496,7 @@ public class Controller implements Initializable
 				newStage.setMinHeight(250);
 				newStage.setMinWidth(250);
 
-				newStage.setTitle("Bereich ausw‰hlen");
+				newStage.setTitle("Bereich ausw√§hlen");
 
 				newStage.getIcons().add(new Image("/application/crop.png"));
 
@@ -521,7 +521,7 @@ public class Controller implements Initializable
 			Alert alert = new Alert(AlertType.WARNING);
 			alert.setTitle("Warnung");
 			alert.setHeaderText("");
-			alert.setContentText("Kein Bild ausgew‰hlt.\nBitte w‰hle ein Bild aus der Liste.");
+			alert.setContentText("Kein Bild ausgew√§hlt.\nBitte w√§hle ein Bild aus der Liste.");
 			alert.initOwner(stage);
 			Stage dialogStage = (Stage)alert.getDialogPane().getScene().getWindow();
 			dialogStage.getIcons().add(new Image(this.getClass().getResource("/application/crop.png").toString()));
@@ -551,12 +551,12 @@ public class Controller implements Initializable
 				}
 				else
 				{
-					labelSavePath.setText("<Nicht ausgew‰hlt>");
+					labelSavePath.setText("<Nicht ausgew√§hlt>");
 				}
 			}	
 			else
 			{
-				labelSavePath.setText("<Nicht ausgew‰hlt>");
+				labelSavePath.setText("<Nicht ausgew√§hlt>");
 			}
 		}
 		else
@@ -567,7 +567,7 @@ public class Controller implements Initializable
 			labelHeight.setText("10");
 
 			Cropper.setValues(0, 0, 10, 10);
-			labelSavePath.setText("<Nicht ausgew‰hlt>");
+			labelSavePath.setText("<Nicht ausgew√§hlt>");
 		}
 	}
 
@@ -595,7 +595,7 @@ public class Controller implements Initializable
 	public void about(ActionEvent e)
 	{
 		Alert alert = new Alert(AlertType.INFORMATION);
-		alert.setTitle("‹ber " + bundle.getString("app.name"));
+		alert.setTitle("√úber " + bundle.getString("app.name"));
 		alert.setHeaderText(bundle.getString("app.name"));
 		alert.setContentText("Version:     " + bundle.getString("version.name") + "\r\nDatum:      " + bundle.getString("version.date") + "\r\nAutor:        Robert Goldmann\r\n");
 		alert.initOwner(stage);
