@@ -1,7 +1,7 @@
 # CropShot
 
 - startdate: 30.06.15
-- current version: 2.2.0 (8) -  08.07.16
+- current version: 2.2.1 (9) -  26.04.17
 
 ### Description
 
